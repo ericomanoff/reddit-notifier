@@ -1,0 +1,19 @@
+{
+  "name": "reddit-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericomanoff/reddit-notifier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericomanoff/reddit-notifier/issues"
+  },
+  "homepage": "https://github.com/ericomanoff/reddit-notifier#readme"
+}
