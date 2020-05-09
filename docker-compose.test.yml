@@ -1,0 +1,26 @@
+version: "3"
+services:
+  mysql_database:
+    image: mysql:8
+    ports:
+      - "3001:3306"
+    volumes:
+      - ./src/data/mysql__test_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=test_database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+  node:
+    depends_on:
+      - mysql_database
+    build: .
+    ports:
+      - "3000:80"
+    volumes:
+      - ./src:/root/app
+    environment:
+      - MYSQL_DATABASE=test_database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - NODE_ENV=test

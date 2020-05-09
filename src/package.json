@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch --collectCoverage",
-    "test-one": "ENV_MODE=test jest ",
-    "unit-test": "ENV_MODE=test jest test_unit/*.js",
-    "integration-test": "ENV_MODE=test jest test_integration/*.js",
-    "ci:test": "ENV_MODE=test jest --ci --runInBand --forceExit",
-    "dev": "ENV_MODE=dev nodemon app.js"
+    "test-one": "NODE_ENV=test jest ",
+    "unit-test": "NODE_ENV=test jest test_unit/*.js",
+    "integration-test": "NODE_ENV=test jest test_integration/*.js",
+    "ci:test": "NODE_ENV=test jest --ci --runInBand --forceExit",
+    "dev": "NODE_ENV=dev nodemon app.js"
   },
   "repository": {
     "type": "git",

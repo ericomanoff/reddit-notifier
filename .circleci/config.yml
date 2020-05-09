@@ -16,7 +16,7 @@ jobs:
 
       - restore_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: echo $ENV_MODE
+      - run: echo $NODE_ENV
       - run: npm install
       - save_cache:
           paths:

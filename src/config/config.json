@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": "root_password",
-    "database": "database_test",
+    "database": "test_database",
     "host": "reddit-notifier_mysql_database_1",
     "port": "3306",
     "dialect": "mysql"

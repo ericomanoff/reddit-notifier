@@ -10,7 +10,7 @@ const userRepo = new UserRepo({
 
 const createUser = new CreateUser({ userRepo });
 beforeAll(function () {
-  if (["dev", "test", "ci"].includes(process.env.NODE_ENV)) {
+  if (["test", "ci"].includes(process.env.NODE_ENV)) {
     return db.User.destroy({ truncate: { cascade: false } });
   }
 });

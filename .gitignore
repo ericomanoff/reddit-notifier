@@ -104,3 +104,4 @@ dist
 .tern-port
 
 mysql_data/
+mysql__test_data/
