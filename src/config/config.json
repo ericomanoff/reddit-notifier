@@ -1,0 +1,18 @@
+{
+  "dev": {
+    "username": "root",
+    "password": "root_password",
+    "database": "dev_database",
+    "host": "reddit-notifier_mysql_database_1",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root_password",
+    "database": "database_test",
+    "host": "reddit-notifier_mysql_database_1",
+    "port": "3306",
+    "dialect": "mysql"
+  }
+}
