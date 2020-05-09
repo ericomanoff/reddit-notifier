@@ -1,0 +1,5 @@
+module.exports = {
+  'env': 'development',
+  'config': './data/config',
+  'migrations':'./data/config'
+}
