@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch --collectCoverage",
-    "test:ci": "jest"
+    "test-one": "ENV_MODE=test jest ",
+    "unit-test": "ENV_MODE=test jest test_unit/*.js",
+    "integration-test": "ENV_MODE=test jest test_integration/*.js",
+    "ci:test": "ENV_MODE=test jest --ci --runInBand --forceExit",
+    "dev": "ENV_MODE=dev nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,8 @@
   },
   "homepage": "https://github.com/ericomanoff/reddit-notifier#readme",
   "dependencies": {
-    "jest": "^26.0.1"
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "sequelize": "^5.21.7"
   }
 }
