@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "REDDIT_API": "https://www.reddit.com",
+    "SENDGRID_API": "some api"
+  },
+  "test": {}
+}

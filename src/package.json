@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ericomanoff/reddit-notifier#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "cuid": "^2.1.8",
     "express": "^4.17.1",
     "express-validator": "^6.4.1",

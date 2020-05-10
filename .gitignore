@@ -105,3 +105,4 @@ dist
 
 mysql_data/
 mysql__test_data/
+credentials.json
