@@ -1,25 +1,17 @@
 version: 2.1
+orbs:
+  node: circleci/node@1.1.6
 jobs:
-  build:
-    docker:
-      - image: node:14.2.0-slim
-      - image: circleci/mysql:8.0.4
-      environment:
-        MYSQL_ROOT_PASSWORD: rootpw
-        MYSQL_DATABASE: test_db
-        MYSQL_USER: user
-        MYSQL_PASSWORD: passw0rd
-    working_directory: ~/reddit-notifier
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-          path: ~/reddit-notifier 
-
-      - restore_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: echo $NODE_ENV
-      - run: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run unit-test
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run unit-test
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
