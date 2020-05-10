@@ -8,7 +8,7 @@
     "test-one": "NODE_ENV=test jest ",
     "unit-test": "NODE_ENV=test jest --watch test_unit/**/*.js",
     "integration-test": "NODE_ENV=test jest test_integration/*.js",
-    "ci:test": "NODE_ENV=test jest --ci --runInBand --forceExit",
+    "ci:test": "NODE_ENV=test jest --ci --runInBand --forceExit test_unit/**/*.js",
     "dev": "NODE_ENV=dev nodemon app.js"
   },
   "repository": {
