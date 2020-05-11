@@ -16,3 +16,9 @@ then
 
 this tool is built with Bob Martin's Clean Architecture
 https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
+### api
+the api receives json requests and stores users and thread preferences in a mysql db
+
+### cron
+the cron uses the same code base but runs on a different server and queries the db everyday at 8am and triggers the emails
