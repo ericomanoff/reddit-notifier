@@ -9,7 +9,8 @@
     "unit-test": "NODE_ENV=test jest --watch test_unit/**/*.js",
     "integration-test": "NODE_ENV=test jest test_integration/*.js",
     "ci:test": "NODE_ENV=test jest --ci --runInBand --forceExit test_unit/**/*.js",
-    "dev": "NODE_ENV=dev nodemon app.js"
+    "dev": "NODE_ENV=dev nodemon app.js",
+    "cronDev": "NODE_ENV=dev nodemon cron.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/ericomanoff/reddit-notifier#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.1.0",
     "axios": "^0.19.2",
     "cuid": "^2.1.8",
     "express": "^4.17.1",

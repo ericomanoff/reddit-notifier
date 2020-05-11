@@ -1,29 +1,18 @@
 class SendGridService {
-  constructor({ httpLib, api }) {
+  constructor({ httpLib, api, sgMail }) {
     this.httpLib = httpLib;
     this.api = api;
   }
 
-  async postEmail() {
-    const headers = {};
+  async sendEmail({ to, body }) {
+    const msg = {
+      to: to,
+      from: "test@example.com",
+      subject: "Top Posts from Reddit",
+      text: body,
+    };
 
-    const params = {};
-    if (opts.limit) {
-      params.limit = opts.limit;
-    }
-
-    const requestOptions = Object.assign({}, { headers }, { params });
-
-    const url = `${this.api}/${thread}/${filter}.json`;
-
-    if (process.env.ENV_MODE === "dev") {
-      console.log("url: ", url);
-      console.log("requestOptions: ", requestOptions);
-    }
-
-    const response = await this.httpLib.post(url, requestOptions);
-
-    return response.data.response;
+    sgMail.send(msg);
   }
 }
 

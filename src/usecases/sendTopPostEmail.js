@@ -22,7 +22,7 @@ class SendTopPostEmail {
         topPosts[thread] = postArray;
       });
 
-      this.sendGridService.postEmail({
+      this.sendGridService.sendEmail({
         to: user.email,
         body: topPosts,
       });

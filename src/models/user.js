@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  User.associate = function (models) {};
+  User.associate = function (models) {
+    User.belongsToMany(models.Thread, {
+      through: "UserThreads",
+    });
+  };
   return User;
 };

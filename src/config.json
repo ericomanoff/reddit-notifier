@@ -1,7 +1,7 @@
 {
   "dev": {
     "REDDIT_API": "https://www.reddit.com",
-    "SENDGRID_API": "some api"
+    "SENDGRID_API_KEY": "some api"
   },
   "test": {}
 }
