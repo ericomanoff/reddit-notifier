@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ericomanoff/reddit-notifier#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cuid": "^2.1.8",
     "express": "^4.17.1",
     "express-validator": "^6.4.1",
